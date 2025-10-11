@@ -16,7 +16,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ==================== CONFIGURATION ====================
-TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE')
+TELEGRAM_BOT_TOKEN = '8297692816:AAE9-ELN52UJ_uA9WM1L_yOH-n4t0I9kfKI'
 DELAY_BETWEEN_ACTIONS = 4  # seconds
 MAX_ACTIONS_PER_HOUR = 60
 
@@ -815,16 +815,6 @@ def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 def main():
     """Start the bot"""
     
-    if TELEGRAM_BOT_TOKEN == 'YOUR_BOT_TOKEN_HERE':
-        print("=" * 60)
-        print("❌ ERROR: TELEGRAM_BOT_TOKEN not set!")
-        print("=" * 60)
-        print("Please set your bot token in one of these ways:")
-        print("1. Edit instagram_bot.py and replace 'YOUR_BOT_TOKEN_HERE'")
-        print("2. Set environment variable: export TELEGRAM_BOT_TOKEN='your_token'")
-        print("=" * 60)
-        return
-    
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     
     conv_handler = ConversationHandler(
@@ -848,6 +838,7 @@ def main():
     print("=" * 60)
     print("🤖 Instagram Multi-User Manager Bot Started!")
     print("=" * 60)
+    print(f"✅ Bot Token: {TELEGRAM_BOT_TOKEN[:20]}...")
     print(f"✅ Authorization: DISABLED (Multi-User Mode)")
     print(f"⚠️  Anyone with bot link can use it")
     print(f"⏱️  Delay between actions: {DELAY_BETWEEN_ACTIONS} seconds")
