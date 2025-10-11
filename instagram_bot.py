@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ==================== CONFIGURATION ====================
-TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN_HERE"  # Replace with your bot token
+TELEGRAM_BOT_TOKEN = "8297692816:AAE9-ELN52UJ_uA9WM1L_yOH-n4t0I9kfKI"  # Replace with your bot token
 
 # Safety settings
 DELAY_BETWEEN_ACTIONS = 4
