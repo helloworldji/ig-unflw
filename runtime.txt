@@ -1,3 +1,1 @@
-==> Using Python version 3.11.9
-✅ Successfully installed python-telegram-bot-13.7
-✅ Bot started successfully
+python-3.11.9
